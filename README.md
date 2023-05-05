@@ -1,5 +1,13 @@
 ## ![DiceForge Logo](static/diceforge.png) DiceForge Documentation v1.0.0
 
+### QUICK NAVIGATION
+
+[![Connect on RapidAPI](https://storage.googleapis.com/rapidapi-documentation/connect-on-rapidapi-dark.png)](https://rapidapi.com/skullzarmy-YuORutOAw/api/diceforge/pricing)
+
+ENDPOINTS: [/roll](#31-roll--roll-dice) | [/statroll](#32-statroll--stat-roll) | [/notation](#33-notation--use-dice-notation)
+
+[Proofs](#8-proofs-of-randomness) | [Contact](#7-support--contact)
+
 ---
 
 ## 1. Introduction
@@ -10,7 +18,9 @@ Welcome to the documentation for DiceForge version 1.0.0! DiceForge is a powerfu
 
 To get started with DiceForge, you will need to sign up for a FREE API key through RapidAPI. Once you have your API key, you can start making requests to the DiceForge endpoints.
 
-Everyone can access up to 1000 rolls each month for FREE. Upgrade to the $1/mo Pro plan to get 100,000 rolls/month and access to pay-as-you-go overage, so you never hit a cap.
+I have provided a comfortable FREE tier so everyone can access this API! Paid plans are only needed at production application levels (10k+ calls/mo).
+
+[![Connect on RapidAPI](https://storage.googleapis.com/rapidapi-documentation/connect-on-rapidapi-dark.png)](https://rapidapi.com/skullzarmy-YuORutOAw/api/diceforge/pricing)
 
 ## 3. API Endpoints
 
@@ -122,6 +132,8 @@ To make a POST request, send a JSON payload with the following structure:
 ```
 
 The response format is the same as for the GET request.
+
+[EXAMPLE](#using-standard-rpg-notation-with-2-dice-types-and-advantage-post)
 
 ## 4. Error Handling
 
@@ -293,3 +305,5 @@ For any questions or support requests, please contact Joe Peterson at [https://j
 ![static/1000d20-1.png](static/1000d20-1.png)
 ![static/1000d20-2.png](static/1000d20-2.png)
 ![static/1000d20-3.png](static/1000d20-3.png)
+
+[![Connect on RapidAPI](https://storage.googleapis.com/rapidapi-documentation/connect-on-rapidapi-dark.png)](https://rapidapi.com/skullzarmy-YuORutOAw/api/diceforge/pricing)
