@@ -1,4 +1,6 @@
-## ![DiceForge Logo](static/diceforge.png) DiceForge Documentation v1.0.0
+![DiceForge Logo](static/diceforge.png)
+
+## DiceForge Documentation v1.0.0
 
 ### QUICK NAVIGATION
 
