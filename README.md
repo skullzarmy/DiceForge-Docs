@@ -20,7 +20,7 @@ Welcome to the documentation for DiceForge version 1.0.0! DiceForge is a powerfu
 
 To get started with DiceForge, you will need to sign up for a FREE API key through RapidAPI. Once you have your API key, you can start making requests to the DiceForge endpoints.
 
-I have provided a comfortable FREE tier so everyone can access this API! Paid plans are only needed at production application levels (10k+ calls/mo).
+I have provided a comfortable FREE tier so everyone can access this API! Paid plans are only needed if you want the advanced endpoints (notation and statrolls), or at production application levels (10k+ calls/mo).
 
 [![Connect on RapidAPI](https://storage.googleapis.com/rapidapi-documentation/connect-on-rapidapi-dark.png)](https://rapidapi.com/skullzarmy-YuORutOAw/api/diceforge/pricing)
 
@@ -38,7 +38,7 @@ To make a GET request, pass the following query parameters:
 
 -   `sides`: An integer representing the number of sides for each die.
 -   `count`: An integer representing the number of times each die should be rolled.
--   `modifier`: An integer representing the modifier to apply to each die's total.
+-   `modifier`: An integer representing the modifier to apply to the die total.
 -   `advantage`: A boolean indicating whether advantage should be applied to the rolls (default: false).
 -   `disadvantage`: A boolean indicating whether disadvantage should be applied to the rolls (default: false).
 
