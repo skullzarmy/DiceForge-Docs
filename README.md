@@ -28,6 +28,46 @@ I have provided a comfortable FREE tier so everyone can access this API! Paid pl
 
 DiceForge offers three main endpoints for rolling dice: [`/roll`](#31-roll--roll-dice) and [`/statroll`](#32-statroll--stat-roll) which supports both GET and POST requests, as well as [`/notation`](#33-notation--use-dice-notation) which only supports POST requests.
 
+### Example Response
+
+All endpoints will return a JSON response body structured like the following:
+
+```json
+{
+    "dice": [
+        {
+            "sides": 6,
+            "results": [
+                {
+                    "rolls": [5, 2],
+                    "selected_roll": 5
+                },
+                {
+                    "rolls": [3, 1],
+                    "selected_roll": 3
+                }
+            ],
+            "modifier": 4,
+            "total": 12
+        },
+        {
+            "sides": 20,
+            "results": [
+                {
+                    "rolls": [12, 5],
+                    "selected_roll": 12
+                }
+            ],
+            "modifier": 3,
+            "total": 15
+        }
+    ],
+    "total_modifier": 4,
+    "advantage": true,
+    "total": 31
+}
+```
+
 ### 3.1. `/roll` – Roll Dice
 
 The `/roll` endpoint allows you to roll one or more dice with various configurations, such as the number of sides, count, and modifiers. You can also apply advantage or disadvantage to the rolls.
@@ -37,10 +77,10 @@ The `/roll` endpoint allows you to roll one or more dice with various configurat
 To make a GET request, pass the following query parameters:
 
 -   `sides`: An integer representing the number of sides for each die.
--   `count`: An integer representing the number of times each die should be rolled.
--   `modifier`: An integer representing the modifier to apply to the die total.
--   `advantage`: A boolean indicating whether advantage should be applied to the rolls (default: false).
--   `disadvantage`: A boolean indicating whether disadvantage should be applied to the rolls (default: false).
+-   `count`: _(optional)_ An integer representing the number of times each die should be rolled.
+-   `modifier`: _(optional)_ An integer representing the modifier to apply to the die total.
+-   `advantage`: _(optional)_ A boolean indicating whether advantage should be applied to the rolls (default: false).
+-   `disadvantage`: _(optional)_ A boolean indicating whether disadvantage should be applied to the rolls (default: false).
 
 The response will be a JSON object containing the results of the roll, including the dice configuration, individual roll results, and the total result.
 
@@ -65,6 +105,7 @@ Response:
             "total": 4
         }
     ],
+    "advantage": true,
     "total": 4
 }
 ```
@@ -94,6 +135,8 @@ The response format is the same as for the GET request.
 
 The `/statroll` endpoint is designed for rolling character stats, rolling 4 six-sided dice and dropping the lowest result.
 
+-   `modifier`: _(optional)_ An integer representing the modifier to apply to the die total.
+
 #### 3.2.1. GET
 
 To make a GET request, pass the following query parameter:
@@ -103,7 +146,9 @@ The response format is the same as for the `/roll` endpoint.
 
 #### 3.2.2. POST
 
-To make a POST request, send an _optional JSON payload_ with the following structure:
+To make a POST request, send a JSON with the following structure:
+
+_\*If you don't want to use a modifier you need to send an empty JSON body_
 
 ```json
 {
@@ -115,7 +160,7 @@ The response format is the same as for the GET request.
 
 ### 3.3. `/notation` – Use Dice Notation
 
-The `/notation` endpoint allows users to pass a single input string in standard RPG Dice Notation format. It can contain several roll commands in one string, for example: `"2d6+12 1d20"`.
+The `/notation` endpoint allows users to pass a single input string in standard RPG Dice Notation format. It can contain several roll commands in one string, for example: `"2d6+12 1d20 +2 !a"`.
 
 #### 3.3.1 POST
 
@@ -123,7 +168,7 @@ Request a roll using the RPG Dice Notation format in the request body.
 
 Supports multiple dice deefinitions separated by a space.
 
-`advantage` and `disadvantage` flags are available by ending your string with `!a` or `!d` respectively.
+`advantage` and `disadvantage` flags are available by including `!a` or `!d` in your string. _NOTE using both is invalid_
 
 To make a POST request, send a JSON payload with the following structure:
 
