@@ -79,6 +79,7 @@ To make a GET request, pass the following query parameters:
 -   `sides`: An integer representing the number of sides for each die.
 -   `count`: _(optional)_ An integer representing the number of times each die should be rolled.
 -   `modifier`: _(optional)_ An integer representing the modifier to apply to the die total.
+-   `total_modifier`: _(optional)_ An integer representing the modifier to apply to the overall total of all rolls.
 -   `advantage`: _(optional)_ A boolean indicating whether advantage should be applied to the rolls (default: false).
 -   `disadvantage`: _(optional)_ A boolean indicating whether disadvantage should be applied to the rolls (default: false).
 
