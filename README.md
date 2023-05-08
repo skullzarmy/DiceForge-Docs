@@ -1,6 +1,6 @@
 ![DiceForge Logo](static/diceforge.png)
 
-## DiceForge Documentation v1.0.0
+## DiceForge Documentation v1.0.3
 
 ### QUICK NAVIGATION
 
@@ -14,7 +14,7 @@ ENDPOINTS: [/roll](#31-roll--roll-dice) | [/statroll](#32-statroll--stat-roll) |
 
 ## 1. Introduction
 
-Welcome to the documentation for DiceForge version 1.0.0! DiceForge is a powerful, easy-to-use API for rolling dice and generating random results for tabletop games, simulations, and other applications. With support for various dice configurations and roll types, DiceForge provides a flexible solution for your dice-rolling needs.
+Welcome to the documentation for DiceForge! DiceForge is a powerful, easy-to-use API for rolling dice and generating random results for tabletop games, simulations, and other applications. With support for various dice configurations and roll types, DiceForge provides a flexible solution for your dice-rolling needs.
 
 ## 2. Getting Started
 
