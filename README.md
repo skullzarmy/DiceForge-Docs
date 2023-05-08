@@ -6,9 +6,9 @@
 
 [![Connect on RapidAPI](https://storage.googleapis.com/rapidapi-documentation/connect-on-rapidapi-dark.png)](https://rapidapi.com/skullzarmy-YuORutOAw/api/diceforge/pricing)
 
-ENDPOINTS: [/roll](#31-roll--roll-dice) | [/statroll](#32-statroll--stat-roll) | [/notation](#33-notation--use-dice-notation)
+ENDPOINTS: | [/roll](#31-roll--roll-dice) | [/statroll](#32-statroll--stat-roll) | [/notation](#33-notation--use-dice-notation) |
 
-[Proofs](#8-proofs-of-randomness) | [Contact](#7-support--contact)
+| [Proofs](#8-proofs-of-randomness) | [Contact](#7-support--contact) |
 
 ---
 
